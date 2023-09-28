@@ -7,40 +7,7 @@ const INFO = [
   { name: "Disqualified", count: 78 },
 ];
 
-const CANDIDATES = [
-  {
-    name: "Aaliyah Sanderson",
-    location: "Riyadh, Saudi Arabia",
-    education: "Bachelor - Cambridge University (2023 - 2023)",
-  },
-  {
-    name: "John Doe",
-    location: "Bostom, USA",
-    education: "Bachelor - MIT (2023 - 2023)",
-  },
-  {
-    name: "Thomas Matt",
-    location: "Edinburgh, UK",
-    education: "Bachelor - Harvard University (2023 - 2023)",
-  },
-  {
-    name: "Kamilia Smith",
-    location: "London, UK",
-    education: "Bachelor - Boston University (2023 - 2023)",
-  },
-  {
-    name: "Roy Jade",
-    location: "Cambridge,  UK",
-    education: "Bachelor - Yale (2023 - 2023)",
-  },
-  {
-    name: "Ahmed Salman",
-    location: "New York, USA",
-    education: "Bachelor - Cambridge University (2023 - 2023)",
-  },
-];
-
-const Candidates = () => {
+const Candidates = ({ data }) => {
   return (
     <div className="bg-white px-5 rounded-2xl">
       <div className="flex items-center justify-between py-4 border-b border-[#EAEBEE]">
@@ -65,7 +32,7 @@ const Candidates = () => {
           ))}
         </div>
       </div>
-      {CANDIDATES.map((item, idx) => (
+      {data.map((item, idx) => (
         <div
           key={idx}
           className="flex items-center gap-6 py-4 border-b border-[#EAEBEE]"

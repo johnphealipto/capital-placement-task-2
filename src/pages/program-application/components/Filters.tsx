@@ -1,6 +1,7 @@
 import { Input } from "antd";
 import { CaretDownIcon, FileIcon, SearchIcon, WarnIcon } from "@/assets/icons";
 import classNames from "classnames";
+import { useState } from "react";
 
 const FILTERS = [
   "Personal Information",
@@ -10,7 +11,9 @@ const FILTERS = [
   "Advanced Filter",
 ];
 
-const Filters = () => {
+const Filters = ({ handleFilter }) => {
+  const [value, setValue] = useState("");
+
   return (
     <div className="flex flex-col gap-6">
       <Input
@@ -18,6 +21,11 @@ const Filters = () => {
         placeholder="Serach by name, edu, exp or #tag"
         prefix={<SearchIcon />}
         suffix={<WarnIcon />}
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+          handleFilter(e.target.value);
+        }}
       />
       <div className="bg-white rounded-lg">
         <div className="flex items-center justify-between py-5 px-4 border-b border-[#EAEBEE]">
