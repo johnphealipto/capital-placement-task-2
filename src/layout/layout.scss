@@ -22,7 +22,14 @@
 
 main#main {
   grid-area: main;
+  position: relative;
   background-color: #f9faff;
   padding: 32px;
   overflow: auto;
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 32px;
+  }
 }

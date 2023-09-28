@@ -10,6 +10,7 @@ import {
   UserIcon,
 } from "@/assets/icons";
 import classNames from "classnames";
+import { useState } from "react";
 
 const NAV_ICONS = [
   <HomeIcon className="h-5 w-5" />,
@@ -23,6 +24,8 @@ const NAV_ICONS = [
 ];
 
 const SideNavigation = () => {
+  const [activeNav, setActiveNav] = useState(0);
+
   return (
     <div id="side-navigation">
       <div className="flex flex-col items-center gap-8">
@@ -31,9 +34,13 @@ const SideNavigation = () => {
           {NAV_ICONS.map((item, idx) => (
             <li
               key={idx}
-              className={classNames("p-[15px] rounded-lg", {
-                "bg-[#E9EFFF]": idx === 3,
-              })}
+              className={classNames(
+                "p-[15px] rounded-lg text-dark cursor-pointer",
+                {
+                  "bg-[#E9EFFF] !text-blue": idx === activeNav,
+                }
+              )}
+              onClick={() => setActiveNav(idx)}
             >
               {item}
             </li>

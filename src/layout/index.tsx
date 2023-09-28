@@ -1,4 +1,5 @@
 import SideNavigation from "./side-navigation";
+import TopNavigation from "./top-navigation";
 import "./layout.scss";
 
 interface ILayout {
@@ -9,7 +10,10 @@ const Layout: React.FC<ILayout> = ({ children }) => {
   return (
     <div id="layout">
       <SideNavigation />
-      <main id="main">{children}</main>
+      <main id="main">
+        <TopNavigation />
+        {children}
+      </main>
     </div>
   );
 };
