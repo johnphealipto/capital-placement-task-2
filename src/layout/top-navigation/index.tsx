@@ -34,7 +34,7 @@ const TopNavigation = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="main-grid mb-8">
+    <div className="main-grid mb-10">
       <div>
         <p className="text-blue text-xl font-bold">London Internship Program</p>
         <p className="text-sm">London</p>
@@ -52,7 +52,7 @@ const TopNavigation = () => {
           </div>
           <div
             className={classNames(
-              "bg-white absolute w-full h-0 top-3/4 rounded-b-2xl overflow-hidden shadow-[0_4px_25px_0_rgba(29,78,216,.05)] transition-all duration-100",
+              "bg-white absolute w-full h-0 top-3/4 rounded-b-2xl overflow-hidden shadow-[0_4px_25px_0_rgba(29,78,216,.05)] transition-all duration-100 z-50",
               { "!h-fit !top-full": isActive }
             )}
           >

@@ -13,6 +13,8 @@ import TagIcon from "./tag.svg?react";
 import UserCheckIcon from "./user-check.svg?react";
 import UserCloseIcon from "./user-close.svg?react";
 import UserVoiceIcon from "./user-voice.svg?react";
+import SearchIcon from "./search.svg?react";
+import WarnIcon from "./warning.svg?react";
 
 export {
   CalendarIcon,
@@ -30,4 +32,6 @@ export {
   UserCheckIcon,
   UserCloseIcon,
   UserVoiceIcon,
+  SearchIcon,
+  WarnIcon,
 };
