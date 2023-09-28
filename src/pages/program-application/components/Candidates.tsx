@@ -13,7 +13,7 @@ const Candidates = ({ data }) => {
       <div className="flex items-center justify-between py-4 border-b border-[#EAEBEE]">
         <div className="flex gap-6 items-center">
           <CheckBox />
-          <span className="text-blue font-bold">247 Candidates</span>
+          <span className="text-blue font-bold">{data.length} Candidates</span>
         </div>
         <div className="flex gap-7">
           {INFO.map((item, idx) => (
